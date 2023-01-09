@@ -48,10 +48,12 @@ const Navbar = () => {
   return (
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav>
-        <NavbarContainer className=''>
-          <NavLogo to='/'>
-            <NavIcon src='./assets/quickFundLogo.png' alt='logo' />
-            Quick<Span>Fun</Span>d
+        <NavbarContainer className="">
+          <NavLogo to="/">
+            <NavIcon src="./assets/quickFundLogo.png" alt="logo" />
+            <H4>
+              Quick <u>Fun</u>d Consulting{' '}
+            </H4>
           </NavLogo>
           <MobileIcon onClick={handleClick}>
             {show ? <FaTimes /> : <CgMenuRight />}
@@ -212,6 +214,8 @@ export const NavBtnLink = styled(Link)`
   outline: none;
 `;
 
-export const Span = styled.span`
-  text-decoration: underline;
+export const H4 = styled.h4`
+  width: 500px;
+  text-decoration: none;
+  font-weight: inherit;
 `;
